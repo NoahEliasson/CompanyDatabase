@@ -18,10 +18,16 @@ static class CompanyDatabase
         var allEmployees = connection.Query<dynamic>(sql).ToList();
         return allEmployees;
     }   
-    public static void InsertEmployee(string name, int birthdate, string sex, int salary, int managerId, int branchId)
+    public static void InsertEmployee(string name, DateTime birthdate, string sex, int salary, int managerId, int branchId)
     {
             string sql=$"INSERT INTO employee VALUES(\"{name}\", {birthdate}, {sex}, {salary}, {managerId}, {branchId});";
             connection.Execute(sql);
+    }
+    public static List<dynamic>GetAllManagers()
+    {
+        string sql = "SELECT employee.id, employee.name FROM employee INNER JOIN branch ON employee.id = branch.branchManager;";
+        var allManagers = connection.Query<dynamic>(sql).ToList();
+        return allManagers;
     }
 }
 

@@ -16,6 +16,15 @@ class printMethods
         Console.WriteLine("Name: " + e.Name + ", Birthdate: " + e.Birthdate + ", Sex: " + e.Sex + ", Salary: " + e.Salary + ", ManagerID: " + e.ManagerID + ", BranchID: " + e.BranchID);
         }
     }
+    public static void PrintAllManagers()
+    {
+        System.Console.WriteLine("*****Managers******");
+        List<dynamic>mgrList = CompanyDatabase.GetAllManagers();
+        foreach (dynamic m in mgrList)
+        {
+            Console.WriteLine("managerId: " + m.id + ", Name: " + m.name);
+        }
+    }
     public static void PrintInsertEmployee()
 {
     System.Console.WriteLine("********Insert New Employee********");
@@ -36,8 +45,12 @@ class printMethods
     Console.Clear();
     System.Console.WriteLine("Enter the employees salary, only in numbers");
     int salary = int.Parse(Console.ReadLine());
+    Console.Clear();
     
-    CompanyDatabase.InsertEmployee(name, birthDate, sex, salary);
+    int managerId = int.Parse(Console.ReadLine());
+    int branchId = int.Parse(Console.ReadLine());
+
+    CompanyDatabase.InsertEmployee(name, birthDate, sex, salary, managerId, branchId);
 }
 
 public static string ChooseSex()

@@ -27,7 +27,7 @@ namespace CsDatabaseConsoleProgram
                             printMethods.PrintEmployees();
                         break; 
                         case 2:
-
+                            printMethods.PrintAllManagers();
                         break;
                     }
             }
