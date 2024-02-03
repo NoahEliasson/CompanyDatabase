@@ -8,7 +8,7 @@ using System.ComponentModel.Design;
 namespace CsDatabaseConsoleProgram
 {
     class Program
-    {
+    {   
         static void Main()
         {
             bool isRunning = true;

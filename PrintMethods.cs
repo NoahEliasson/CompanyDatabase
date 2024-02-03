@@ -47,8 +47,11 @@ class printMethods
     int salary = int.Parse(Console.ReadLine());
     Console.Clear();
     
+    CompanyDatabase.GetAllManagers();
+    System.Console.Write("Please choose manager from the list: ");
     int managerId = int.Parse(Console.ReadLine());
-    int branchId = int.Parse(Console.ReadLine());
+    
+    //branchId referrera till managerId och vilken branch dom är managers över, behövs realistiskt inte någon userinput här. 
 
     CompanyDatabase.InsertEmployee(name, birthDate, sex, salary, managerId, branchId);
 }
