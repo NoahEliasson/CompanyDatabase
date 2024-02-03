@@ -50,7 +50,15 @@ class printMethods
     CompanyDatabase.GetAllManagers();
     System.Console.Write("Please choose manager from the list: ");
     int managerId = int.Parse(Console.ReadLine());
-    
+    int branchId = 0;
+    if(managerId == 2)
+    {
+        branchId = 2; 
+    }
+    else if(managerId == 5)
+    {
+        branchId = 3;
+    }
     //branchId referrera till managerId och vilken branch dom är managers över, behövs realistiskt inte någon userinput här. 
 
     CompanyDatabase.InsertEmployee(name, birthDate, sex, salary, managerId, branchId);

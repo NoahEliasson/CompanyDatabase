@@ -1,0 +1,15 @@
+[33mcommit f54d15d643171d2dd6ffa1a456f4c95f54f42777[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Noah <noah7520@outlook.com>
+Date:   Sat Feb 3 14:39:46 2024 +0100
+
+    mhj
+
+[1mdiff --git a/CompanyDatabase.cs b/CompanyDatabase.cs[m
+[1mindex ff345d4..6cdf6ef 100644[m
+[1m--- a/CompanyDatabase.cs[m
+[1m+++ b/CompanyDatabase.cs[m
+[36m@@ -1,4 +1,3 @@[m
+[31m-using System;[m
+ using System.Data;[m
+ using System.Collections.Generic; [m
+ using MySql.Data;[m
